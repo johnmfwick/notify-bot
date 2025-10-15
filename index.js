@@ -1,8 +1,8 @@
 const { Client } = require('discord.js-selfbot-v13');
  
 const cfg = {
-  token: 'MTQyNzM5MzEzODc1NDA2MDM2MA.Gkxe9q.7aOmxOXj_PvuFZDTYUyAOy-KZLYyPTwIrgUTOI',            // Paste your account token here
-  logChannelId: '1427579158325624832',     // Channel ID to send logs to
+  token: process.env.TOKEN,
+  logChannelId: process.env.LOG_CHANNEL_ID, 
 };
  
 const client = new Client();
@@ -177,3 +177,4 @@ client.on('guildMemberAdd', async (member) => {
  
 
 client.login(cfg.token);
+
